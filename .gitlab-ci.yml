@@ -27,6 +27,17 @@ Linux_Unsecured_Test:
     - cd port/linux
     - make DYNAMIC=1 IPV4=1 TCP=1 SECURE=0 test
 
+Linux_with_java:
+  stage: build
+  before_script:
+    - apt update && apt -y install make autoconf swig default-jdk
+    - swig -version
+    - java -version
+    - javac -version
+  script:
+    - cd port/linux
+    - make TCP=1 IPV4=1 CLOUD=1 PKI=1 JAVA=1
+
 Android_build:
   variables:
     GIT_SUBMODULE_STRATEGY: normal
