@@ -7,3 +7,6 @@
 [submodule "deps/gtest"]
 	path = deps/gtest
 	url = https://github.com/google/googletest.git
+[submodule "port/esp32-TTGO-example/components/lv_lib_qrcode"]
+	path = port/esp32-TTGO-example/components/lv_lib_qrcode
+	url = git@github.com:lvgl/lv_lib_qrcode.git
