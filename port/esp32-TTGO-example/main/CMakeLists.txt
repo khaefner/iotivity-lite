@@ -136,9 +136,9 @@ idf_component_register(
 	INCLUDE_DIRS
 		${includes}
 )
-target_compile_definitions(${COMPONENT_LIB} PUBLIC "-DLV_LVGL_H_INCLUDE_SIMPLE")
 
 set_source_files_properties(${sources}
    PROPERTIES COMPILE_FLAGS
     "-DOC_SERVER -DOC_CLIENT"
     )
+target_compile_definitions(${COMPONENT_LIB} PUBLIC "-DLV_LVGL_H_INCLUDE_SIMPLE")
